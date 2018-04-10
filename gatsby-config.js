@@ -5,7 +5,7 @@ module.exports = {
     description: 'Course material for the opencampus course "Projekt WebApp"',
     siteUrl: 'https://project-webapp.netlify.com/',
   },
-  pathPrefix: '',
+  // pathPrefix: '',
   plugins: [
     `gatsby-plugin-glamor`,
     {
