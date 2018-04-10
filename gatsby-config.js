@@ -3,9 +3,9 @@ module.exports = {
     title: 'opencampus Project-WebApp',
     author: 'Kalle Ott',
     description: 'Course material for the opencampus course "Projekt WebApp"',
-    // siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    siteUrl: 'https://project-webapp.netlify.com/',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '',
   plugins: [
     `gatsby-plugin-glamor`,
     {
@@ -59,12 +59,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
