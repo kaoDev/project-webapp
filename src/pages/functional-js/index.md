@@ -314,6 +314,6 @@ const tatooineResidents = people
 * how fast is the TIE bomber?
 * how many characters are listed for the movie "The Phantom
   Menace"?
-* List all the characters from the movie "Revenge of the
+* list all the characters from the movie "Revenge of the
   Sith" matched to their species
-* What is the longest opening crawl of all movies?
+* what is the longest opening crawl of all movies?
