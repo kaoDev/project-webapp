@@ -307,7 +307,7 @@ const tatooineResidents = people
 
 * get familiar with the
   [array functions](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array)
-* get all starships with a hyperdriver rating over 2 which
+* get all starships with a hyperdrive rating over 2 which
   appear in the movie "A new Hope"
 * are there any transports capable of carrying more than 8
   passengers which are cheaper than 400000 credits
