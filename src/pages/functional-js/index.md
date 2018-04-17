@@ -138,7 +138,8 @@ should be no dependencies to variables defined outside of
 the function's scope. The returned value is also always the
 same if the passed parameters are the same (no randomness or
 hold state in the function). Besides calculating the
-resulting value the function has no other effects.
+resulting value the function has no other effects. So never
+ever mutate the incoming values.
 
 * pure or impure?
 
