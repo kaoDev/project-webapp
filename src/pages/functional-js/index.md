@@ -141,7 +141,30 @@ hold state in the function). Besides calculating the
 resulting value the function has no other effects. So never
 ever mutate the incoming values.
 
-* pure or impure?
+<style>
+  .pure, .impure {
+    position: relative;
+  }
+
+  .pure:hover::before, .impure:hover::before {
+    color: rgba(255,255,255,0.8);
+    width: auto;
+    position: absolute;
+    padding: 0 10px;
+    left: calc(100% + 14px);
+  }
+  .pure:hover::before {
+    content: "pure";
+    background-color: #0aa510;
+
+  }
+  .impure:hover::before {
+    content: "impure";
+    background-color: #a50a10;
+  }
+</style>
+
+* <span class="pure">pure or impure?</span>
 
 ```js
 function f(x, y) {
@@ -149,7 +172,7 @@ function f(x, y) {
 }
 ```
 
-* pure or impure?
+* <span class="impure">pure or impure?</span>
 
 ```js
 let count = 0;
@@ -159,26 +182,26 @@ function f(x, y) {
 }
 ```
 
-* pure or impure?
+* <span class="pure">pure or impure?</span>
 
 ```js
 const f = (x, y) => x + y;
 ```
 
-* pure or impure?
+* <span class="impure">pure or impure?</span>
 
 ```js
 const y = 2;
 const f = x => x + y;
 ```
 
-* pure or impure?
+* <span class="pure">pure or impure?</span>
 
 ```js
 const f = x => x + 2;
 ```
 
-* pure or impure?
+* <span class="impure">pure or impure?</span>
 
 ```js
 const f = (x, y) => {
@@ -188,7 +211,7 @@ const f = (x, y) => {
 ```
 
 Another very important paradigm in functional programming is
-["declarative programming](https://en.wikipedia.org/wiki/Declarative_programming).
+["declarative programming"](https://en.wikipedia.org/wiki/Declarative_programming).
 Instead of describing the control flow of the program you
 should care about the logic and behavior. For example use
 recursion instead of loops.
@@ -218,6 +241,8 @@ const fibonacci = num => {
 Here is a codesandbox with tests to work on this in the
 browser:
 [![Edit Fibonacci](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/jlkz27yyk5)
+
+[solution](https://codesandbox.io/s/j4ql17vzp5)
 
 ## Passing functions around
 
@@ -318,3 +343,5 @@ const tatooineResidents = people
 * list all the characters from the movie "Revenge of the
   Sith" matched to their species
 * what is the longest opening crawl of all movies?
+
+[solution](https://codesandbox.io/s/xyxw87v1o)
