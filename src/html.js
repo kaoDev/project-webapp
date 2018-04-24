@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
@@ -32,6 +33,7 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <link rel="icon" href="/icons/icon-48x48.png" />
           {this.props.headComponents}
           {css}
         </head>
