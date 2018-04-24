@@ -39,7 +39,11 @@ class Bio extends React.Component {
         <Avatar image={profilePic} alt={`Kalle Ott`} />
         <p>
           Written by{" "}
-          <OutboundLink href="https://twitter.com/kaoDev">
+          <OutboundLink
+            href="https://twitter.com/kaoDev"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
             <strong>Kalle Ott</strong>{" "}
           </OutboundLink>
           who lives and works in Kiel
