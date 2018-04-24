@@ -44,9 +44,16 @@ class Bio extends React.Component {
             target="_blank"
             rel="nofollow noopener noreferrer"
           >
-            <strong>Kalle Ott</strong>{" "}
+            Kalle Ott
           </OutboundLink>
-          who lives and works in Kiel
+          {" for "}
+          <OutboundLink
+            href="https://edu.opencampus.sh/"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            opencampus
+          </OutboundLink>
         </p>
       </Container>
     );
