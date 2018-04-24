@@ -21,7 +21,7 @@ export default class HTML extends React.Component {
       );
     }
     return (
-      <html {...this.props.htmlAttributes}>
+      <html {...this.props.htmlAttributes} lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta
@@ -39,7 +39,7 @@ export default class HTML extends React.Component {
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center"
+            alignItems: "center",
           }}
           {...this.props.bodyAttributes}
         >
@@ -48,7 +48,7 @@ export default class HTML extends React.Component {
             key={`body`}
             id="___gatsby"
             dangerouslySetInnerHTML={{
-              __html: this.props.body
+              __html: this.props.body,
             }}
           />
           {this.props.postBodyComponents}

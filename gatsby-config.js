@@ -66,6 +66,50 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "opencampus Project WebApp",
+        short_name: "Project Web",
+        start_url: "/",
+        background_color: "#f0ebf0",
+        theme_color: "#007acc",
+        display: "minimal-ui",
+        icon: "src/assets/icon.png", // This path is relative to the root of the site.
+        icons: [
+          {
+            src: `icons/icon-48x48.png`,
+            sizes: `48x48`,
+            type: `image/png`,
+          },
+          {
+            src: `icons/icon-72x72.png`,
+            sizes: `72x72`,
+            type: `image/png`,
+          },
+          {
+            src: `icons/icon-96x96.png`,
+            sizes: `96x96`,
+            type: `image/png`,
+          },
+          {
+            src: `icons/icon-144x144.png`,
+            sizes: `144x144`,
+            type: `image/png`,
+          },
+          {
+            src: `icons/icon-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `icons/icon-256x256.png`,
+            sizes: `256x256`,
+            type: `image/png`,
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-feed`,
