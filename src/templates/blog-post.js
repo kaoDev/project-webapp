@@ -3,22 +3,32 @@ import Helmet from "react-helmet";
 import Link from "gatsby-link";
 import get from "lodash/get";
 import rehypeReact from "rehype-react";
+import isRelativeUrl from "is-relative-url";
 
 import Bio from "../components/Bio";
 import { rhythm, scale } from "../utils/typography";
 import { ComponentPlayGround } from "../components/ComponentPlayground";
 import glamorous from "glamorous";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
+
+const GatsbyOrOutboundLink = props =>
+  isRelativeUrl(props.href) ? (
+    <Link to={props.href} {...props} />
+  ) : (
+    <OutboundLink {...props} />
+  );
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
-    "component-playground": ComponentPlayGround
-  }
+    "component-playground": ComponentPlayGround,
+    a: GatsbyOrOutboundLink,
+  },
 }).Compiler;
 
 const BlogContainer = glamorous.div({
   maxWidth: "100%",
-  flex: 1
+  flex: 1,
 });
 
 class BlogPostTemplate extends React.Component {
@@ -26,7 +36,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark;
     const siteTitle = get(
       this.props,
-      "data.site.siteMetadata.title"
+      "data.site.siteMetadata.title",
     );
     const { previous, next } = this.props.pathContext;
 
@@ -41,7 +51,7 @@ class BlogPostTemplate extends React.Component {
             ...scale(-1 / 5),
             display: "block",
             marginBottom: rhythm(1),
-            marginTop: rhythm(-1)
+            marginTop: rhythm(-1),
           }}
         >
           {post.frontmatter.date}
@@ -49,7 +59,7 @@ class BlogPostTemplate extends React.Component {
         {renderAst(post.htmlAst)}
         <hr
           style={{
-            marginBottom: rhythm(1)
+            marginBottom: rhythm(1),
           }}
         />
         <Bio />
@@ -60,7 +70,7 @@ class BlogPostTemplate extends React.Component {
             flexWrap: "wrap",
             justifyContent: "space-between",
             listStyle: "none",
-            padding: 0
+            padding: 0,
           }}
         >
           {previous && (
