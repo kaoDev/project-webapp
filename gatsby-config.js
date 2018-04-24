@@ -1,19 +1,28 @@
 module.exports = {
   siteMetadata: {
-    title: 'opencampus Project-WebApp',
-    author: 'Kalle Ott',
-    description: 'Course material for the opencampus course "Projekt WebApp"',
-    siteUrl: 'https://project-webapp.netlify.com/',
+    title: "opencampus Project-WebApp",
+    author: "Kalle Ott",
+    description:
+      'Course material for the opencampus course "Projekt WebApp"',
+    siteUrl: "https://project-webapp.netlify.com/"
   },
   // pathPrefix: '',
   plugins: [
     `gatsby-plugin-glamor`,
+    "gatsby-plugin-react-next",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        name: "pages"
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `examples`,
+        path: `${__dirname}/examples/`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -29,33 +38,33 @@ module.exports = {
               // you may use this to prevent Prism from re-processing syntax.
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
-              classPrefix: 'language-',
-            },
+              classPrefix: "language-"
+            }
           },
           {
-            resolve: 'gatsby-remark-external-links',
+            resolve: "gatsby-remark-external-links",
             options: {
-              target: '_blank',
-              rel: 'nofollow',
-            },
+              target: "_blank",
+              rel: "nofollow"
+            }
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
-            },
+              maxWidth: 590
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-        ],
-      },
+          "gatsby-remark-prismjs",
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants"
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -69,10 +78,23 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: "gatsby-plugin-typography",
       options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
+        pathToConfigModule: "src/utils/typography"
+      }
     },
-  ],
-}
+    {
+      resolve: "gatsby-plugin-nprogress",
+      options: {
+        color: "#61dafb"
+      }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-118037341-1"
+      }
+    },
+    "gatsby-plugin-netlify"
+  ]
+};
