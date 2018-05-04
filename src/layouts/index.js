@@ -4,8 +4,6 @@ import { css } from "glamor";
 
 import { rhythm, scale } from "../utils/typography";
 
-require("prismjs/themes/prism-okaidia.css");
-
 class Template extends React.Component {
   render() {
     const { location, children } = this.props;
@@ -74,6 +72,12 @@ class Template extends React.Component {
       >
         {header}
         {children()}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="/prism-code.css"
+          lazyload
+        />
       </div>
     );
   }

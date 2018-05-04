@@ -10,6 +10,7 @@ import { rhythm, scale } from "../utils/typography";
 import { ComponentPlayGround } from "../components/ComponentPlayground";
 import glamorous from "glamorous";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { CodeView } from "../components/CodeView";
 
 const GatsbyOrOutboundLink = props =>
   isRelativeUrl(props.href) ? (
@@ -22,6 +23,8 @@ const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
     "component-playground": ComponentPlayGround,
+    // "code-view": CodeView,
+    code: CodeView,
     a: GatsbyOrOutboundLink,
   },
 }).Compiler;

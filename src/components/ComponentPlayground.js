@@ -24,18 +24,26 @@ export const ComponentPlayGround = ({
   const code =
     sample.length > 0
       ? require(`!raw-loader!../samples/${sample}`)
-      : noInline ? complex : raw;
+      : noInline
+        ? complex
+        : raw;
 
   return (
-    <LiveProvider code={code} noInline={noInline}>
+    <LiveProvider
+      mountStylesheet={false}
+      code={code}
+      noInline={noInline}
+    >
       <LiveEditWrapper>
         <LiveEditor
+          className={"language-jsx"}
           css={{
             minWidth: "300px",
             flex: 1,
-            overflow: "scroll",
+            overflow: "auto",
             height: "250px",
             width: "100%",
+            fontFamily: "Dank Mono, monospace",
           }}
         />
         <LivePreview

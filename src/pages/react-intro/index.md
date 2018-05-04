@@ -33,7 +33,7 @@ before it can be executed in a browser.
 
 The hello-world as transpiled code looks like this:
 
-```js
+```jsx
 ReactDOM.render(
   React.createElement("h1", null, "Hello, world!"),
   document.getElementById("root"),
@@ -56,7 +56,7 @@ Now a hello-world with a self defined component:
 const HelloWorld = () => <h1>Hello, world!</h1>;
 ReactDOM.render(
   <HelloWorld />,
-  document.getElementById("root"),
+  document.getElementById("rooot"),
 );
 ```
 
