@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-glamor`,
     "gatsby-plugin-react-next",
     "gatsby-plugin-no-sourcemaps",
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
