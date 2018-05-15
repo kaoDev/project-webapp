@@ -166,7 +166,7 @@ const Title = styled("h1")(
 
 * clone the
   [chat-app-start](https://github.com/kaoDev/chat-app-start)
-  repository and start the dev-server (`$ npm start`)
+  repository and start the dev-server (`npm start`)
 * choose one of the styling approaches
   [styled-components](https://www.styled-components.com/docs/basics#installation),
   [glamorous](https://glamorous.rocks/),

@@ -1,6 +1,7 @@
 {
   "name": "project-webapp",
-  "description": "Course material for the opencampus course 'Project WebApp'",
+  "description":
+    "Course material for the opencampus course 'Project WebApp'",
   "version": "1.0.0",
   "author": "Kalle Ott <kalle.ott@cap3.de>",
   "dependencies": {
@@ -36,6 +37,7 @@
     "glamor": "^2.20.40",
     "glamorous": "^4.12.1",
     "lodash": "^4.17.5",
+    "netlify-cms": "^1.7.0",
     "prettier": "^1.12.1",
     "react-helmet": "^5.2.0",
     "react-live": "^1.10.1",
@@ -50,24 +52,27 @@
     "eslint-plugin-react": "^7.7.0",
     "gh-pages": "^1.1.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
+  "homepage": "https://project-webapp.netlify.com/",
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url":
+      "git+https://github.com/kaoDev/project-webapp.git"
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint":
+      "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "deploy":
+      "gatsby build --prefix-paths && gh-pages -d public",
+    "fix-semi":
+      "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }

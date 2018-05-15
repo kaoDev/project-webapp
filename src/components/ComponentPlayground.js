@@ -41,7 +41,6 @@ export const ComponentPlayGround = ({
             minWidth: "300px",
             flex: 1,
             overflow: "auto",
-            height: "250px",
             width: "100%",
             fontFamily: "Dank Mono, monospace",
           }}
