@@ -153,6 +153,54 @@ const messageState = messageStream.pipe(
 );
 ```
 
+To connect this state with the react world a subscription on
+the relevant data is needed in one component which transfers
+the rxjs-state into the react-world. When building a
+subscription it is important to unsubscribe, when it's not
+used anymore to prevent memory-leaks. You can either use a
+direct `.unsubscribe()` call on the subscription object, or
+use the `takeUntil(someObservable)` operator. The
+`subscribe` call should be in the `componentDidMount` react
+lifecycle method, and end of the subscription should be in
+the `componentWillUnmount` lifecycle method. more
+information about the react-component lifecycle can be found
+[here](https://reactjs.org/docs/react-component.html#the-component-lifecycle).
+
+```jsx
+export class App extends React.Component {
+  // initial state
+  state = {
+    /* ✂️ */
+  };
+
+  // subject which emits on componentWillUnmount
+  unMounted = new Subject();
+
+  // react lifecycle method called when this
+  // component got mounted into the dom
+  componentDidMount() {
+    stateObservable
+      .pipe(
+        /* other transforamtions ✂️ */
+        takeUntil(this.unMounted),
+      )
+      .subscribe(stateUpdate => {
+        this.setState(stateUpdate);
+      });
+  }
+
+  // react lifecycle method called when this
+  // component will be removed from the dom
+  componentWillUnmount() {
+    this.unMounted.next();
+  }
+
+  render() {
+    /* ✂️ */
+  }
+}
+```
+
 ### Tasks
 
 * clone the
