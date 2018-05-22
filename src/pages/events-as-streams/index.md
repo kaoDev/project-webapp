@@ -5,7 +5,7 @@ date: "2018-05-22T06:53:03.284Z"
 
 As already said in last session, besides handling the state
 itself it is very important to take care of the state
-changes. On extremely powerful tool for this is
+changes. An extremely powerful tool for this is
 [RXJS](https://github.com/reactivex/rxjs). It works with the
 concept of observables, which are sources of data you can
 subscribe on.
